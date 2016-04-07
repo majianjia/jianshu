@@ -1368,6 +1368,7 @@ footer a {
 }
 
 /* highlight */
+/*
 .post-content pre { background: #23241f; }
 .post-content pre code {background: none; }
 .hljs {
@@ -1518,6 +1519,7 @@ footer a {
 .php .xml {
   opacity: 0.5;
 }
+*/
 
 /* single page*/
 .single .sidebar{
