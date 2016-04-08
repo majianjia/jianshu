@@ -1250,7 +1250,6 @@ footer a {
 .page-qrcode>div{
 	position:absolute;
 	right:56px;
-	top:-48px;
 	display:none;
 	width:96px;
 	height:128px;
