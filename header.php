@@ -58,7 +58,7 @@ $screen_mode = Typecho_Cookie::get('read-mode','day');
 <div class="navbar-user">
     <?php if($this->user->hasLogin()): ?>
         <a class="login" href="<?php $this->options->logoutUrl(); ?>"> <i class="fa fa-sign-out"> </i> <?php _e('退出'); ?></a>
-        <a class="login" href="<?php $this->options->adminUrl(); ?>"> <i class="fa fa-user"> </i> <?php $this->user->screenName(); ?></a>
+        <a class="login" href="<?php $this->options->adminUrl(); ?>"> <i class="fa fa-user"> </i> <?php $this->user->screenName(); ?> </a>
     <?php else: ?>
         <a class="login" href="<?php $this->options->registerUrl(); ?>"><i class="fa fa-user"></i> <?php _e('注册 '); ?></a> 
 	    <a class="login" href="<?php $this->options->loginUrl(); ?>"> <i class="fa fa-sign-in"> </i> <?php _e('登录'); ?> </a> 
@@ -78,7 +78,10 @@ $screen_mode = Typecho_Cookie::get('read-mode','day');
 </div>
 <div class="wrapper">
 <div class="sidebar">
-    <div class="cover-img" style="background-image: url(<?php if ($this->options->bgPhoto){$photo = explode(',',$this->options->bgPhoto);echo $photo[array_rand($photo,1)];}else{$this->options->themeUrl('img/defaultBg.jpg');}?>)"></div>
+    <div class="cover-img" style="background-image: url(<?php if ($this->options->bgPhoto){
+		if(!empty($this->options->src_add) && !empty($this->options->cdn_add)){
+			$this->options->bgPhoto = str_ireplace($this->options->src_add,$this->options->cdn_add, $this->options->bgPhoto);}
+		$photo = explode(',',$this->options->bgPhoto);echo $photo[array_rand($photo,1)];}else{$this->options->themeUrl('img/defaultBg.jpg');}?>)"></div>
     <div class="bottom-block">
 	<?php if($this->options->avatarUrl):?>
 		<img class="avatar" width="72" src="<?php $this->options->avatarUrl();?>" alt="" />

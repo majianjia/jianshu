@@ -277,7 +277,7 @@ body {
 }
 .main{
 	margin-left: 20.0%;
-	width: 65%;
+	width: 61.8%;
 }
 .wrapper .main {
 	padding-left: 12px
@@ -1250,7 +1250,7 @@ footer a {
 .page-qrcode>div{
 	position:absolute;
 	right:56px;
-	top:-48px;
+	top:-72px;
 	display:none;
 	width:96px;
 	height:128px;
@@ -1368,6 +1368,7 @@ footer a {
 }
 
 /* highlight */
+/*
 .post-content pre { background: #23241f; }
 .post-content pre code {background: none; }
 .hljs {
@@ -1518,6 +1519,7 @@ footer a {
 .php .xml {
   opacity: 0.5;
 }
+*/
 
 /* single page*/
 .single .sidebar{
